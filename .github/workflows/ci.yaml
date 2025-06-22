@@ -31,6 +31,9 @@ jobs:
       - name: Run flake8
         run: |
           flake8 main.py
-
+      - name: Install pytest
+        run: |
+          pip install pytest
+          pytest tests/test_main.py
 
 
