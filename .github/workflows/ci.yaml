@@ -1,6 +1,12 @@
 name: CI
 
-on: push
+on: 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   lint-test:
@@ -24,7 +30,7 @@ jobs:
           pip install flake8
       - name: Run flake8
         run: |
-          flake8 test.py
+          flake8 main.py
 
 
 
